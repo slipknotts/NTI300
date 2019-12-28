@@ -1,4 +1,4 @@
 #!/bin/bash
 
-#HELLO WORLD!
-Hey You Guys!!!
+echo "HELLO WORLD!"
+echo "Hey You Guys!!!"
