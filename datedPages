@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo -e "<html><body> /n<h1>NTI-300</h1> /n
+<h2>Automate key features of Linux to make your servitude to web-servers easier and more efficient!</h2> /n
+<p>The time is currently  ...  $(date)  ...  and all is quiet on the virtual front! /n</p></body></html>" > /var/www/html/index.html
