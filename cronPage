@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo -e "<html><body> /n<h1>NTI-300</h1> /n<h2>Automate Linux Now!</h2> /n<p>Current timestamp  ...  <b>$(date)</b> and all is well on the Virtual Frontier! /n</p></body></html>" > /var/www/html/index.html
+ 
