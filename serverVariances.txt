@@ -1,0 +1,17 @@
+Apache vs NginX
+
+1) main difference between these two different servers is NginX is solely a static server it has to send any dynamic content to
+   another device and wait for it to send the processed content back. 
+
+2) next biggest difference is process consumption, Apache creates a new process for every request where NginX can handle
+   multiple requests in the same process.
+
+3) Apache allows for additional, advanced configuration on a per directory level (.htaccess); NginX has no such advanced
+   configuration support.
+
+There are additional differences but these three seemed like the most significant ones to me and from what I can tell, unless you 
+	need special permissions for certain directories or dynamic processes handled directly within the server, NginX appears to be
+	the smaller, faster, cheaper web server for most of your heavenly slices of divine web content.
+
+David Knotts
+NTI-300
