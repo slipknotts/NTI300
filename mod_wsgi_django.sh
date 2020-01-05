@@ -17,4 +17,15 @@ echo "Alias /static /opt/django/project1/static/
     Require all granted
   </Files>
 </Directory>
-  
+WSGIProcessGroup project1 python-path=/opt/django/project1:/opt/django/django-env/lib/python2.7/site-packages/
+WSGIProcessGroup project1
+WSGIScriptAlias / /opt/django/project1/project1/wsgi.py
+" > /etc/httpd/conf.d/django.conf
+
+usermod -a -G slipknotts apache	
+chmod 710 /opt/django
+chmod 664 /opt/django/project1/db.sqlite3
+chown :apache /opt/django/project1/db.sqlite3
+chown :apache /opt/django
+systemctl enable httpd
+systemctl start httpd  
