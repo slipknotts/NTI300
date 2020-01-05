@@ -1,0 +1,2 @@
+myIP=$( curl https://api.ipify.org )
+sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \['"$myIP"'\]/g" /opt/django/project1/project1/settings.py
