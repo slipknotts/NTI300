@@ -1,5 +1,9 @@
 #!/bin/bash
-
+# .bash_profile
+# DIR_STACK=""
+# export DIR_STACK
+# export guarantees DIR_STACK is known
+# exit.bash_profile
 # different book example
 # direct file access without input
 # cut -f4 -d\| albums
@@ -16,19 +20,24 @@ echo "1 - band"
 echo "2 - album"
 echo "3 - label"
 echo "4 - year"
-echo "field number?"
+echo "field name?"
 fieldname=$1
 cut -f$(getfield $fieldname) -d\| 
+
 
 # FUNCTIONS: pushd, popd
 
 pushd()
 {
    dirname=$1
-   
+   DIR_STACK="dirname ${DIR_STACK:-$PWD' '}"
+   cd ${dirname:?"missing directory name"}
+   echo "$DIR_STACK"
 }
 
 popd
 {
-   DIR_STACK
+   DIR_STACK=${DIR_STACK#* }
+   cd ${DIR_STACK%% *}
+   # ${varname:?message}
 }
