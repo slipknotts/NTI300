@@ -19,3 +19,16 @@ echo "4 - year"
 echo "field number?"
 fieldname=$1
 cut -f$(getfield $fieldname) -d\| 
+
+# FUNCTIONS: pushd, popd
+
+pushd()
+{
+   dirname=$1
+   
+}
+
+popd
+{
+   DIR_STACK
+}
