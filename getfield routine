@@ -1,7 +1,9 @@
 #!/bin/bash
 
-cut -f4 -d\| albums
+# direct file access without input
+# cut -f4 -d\| albums
 
-
+# query user for fieldname
+echo "field name?"
 fieldname=$1
 cut -f$(getfield $fieldname) -d\| albums
