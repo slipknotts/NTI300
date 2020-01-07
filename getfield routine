@@ -1,9 +1,21 @@
 #!/bin/bash
 
+# different book example
 # direct file access without input
 # cut -f4 -d\| albums
-
-# query user for fieldname
+        
+# test querry for valid inpput
 echo "field name?"
+  if [ -z "$1" ]; then
+    echo "enter querry parameters..."
+    exit 0;
+  fi
+  
+# query user for fieldname
+echo "1 - band"
+echo "2 - album"
+echo "3 - label"
+echo "4 - year"
+echo "field number?"
 fieldname=$1
-cut -f$(getfield $fieldname) -d\| albums
+cut -f$(getfield $fieldname) -d\| 
